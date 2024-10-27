@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+        background-color: #344151;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .content {
+        display: flex;
+        border: none;
+      }
+      .btn {
+        background-color: white;
+        padding: 10px 25px;
+        border: none;
+        font-weight: bolder;
+        font-size: 20px;
+      }
+      .text {
+        color: rgb(45, 45, 226);
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      #minus {
+        border-right: 1px solid #344151;
+        border-radius: 2px;
+      }
+      #plus {
+        border-left: 1px solid #344151;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="text">increment And decrement</div>
+      <div class="content">
+        <button class="btn" id="minus" onclick="decrement()">-</button>
+        <div id="count" class="btn">0</div>
+        <button class="btn" id="plus" onclick="increment()">+</button>
+      </div>
+    </div>
+    <script>
+      let count = document.getElementById("count");
+      function decrement() {
+        let value = parseInt(count.innerText);
+        value--;
+        count.innerText = value;
+      }
+      function increment() {
+        let value = parseInt(count.innerText);
+        value++;
+        count.innerText = value;
+      }
+    </script>
+  </body>
+</html>

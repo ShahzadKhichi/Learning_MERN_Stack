@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Genrator</title>
+    <style>
+      .length-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .content {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Genrator</h1>
+      <div class="display-container">
+        <input readonly placeholder="password" id="display" />
+        <button class="msg-btn">
+          <span class="copyMsg"></span>
+          <img src="./images/copy.svg" width="23" alt="" />
+        </button>
+      </div>
+      <div class="content">
+        <div class="length-container">
+          <p>Password Length</p>
+          <p class="Length"></p>
+        </div>
+        <input type="range" min="1" max="20" class="slider" step="1" />
+        <div class="check-box">
+          <div>
+            <input type="checkbox" class="check" id="Upper-case" />
+            <label for="Upper-case">Include Uppercase Letters</label>
+          </div>
+          <div>
+            <input type="checkbox" class="check" id="Lower-case" />
+            <label for="Lower-case">Include Lowercase Letters </label>
+          </div>
+          <div>
+            <input type="checkbox" class="check" id="Numbers" />
+            <label for="Numbers">Include Numbers</label>
+          </div>
+          <div>
+            <input type="checkbox" class="check" id="Symbols" />
+            <label for="Symbols">Include Symbols</label>
+          </div>
+        </div>
+        <div>
+          <p>Stregth</p>
+          <div class="data-indicator"></div>
+        </div>
+        <button class="genrate">GENRATE PASSWORD</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
